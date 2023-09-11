@@ -7,7 +7,11 @@ export default function Navbar({ }) {
             <div>
                 <Image src="/3swap.svg" width={796} height={208} alt="3swap" className="w-auto h-10" />
             </div>
-            <div>
+            <div className="flex items-center gap-3">
+                <div className="items-center gap-3 hidden sm:flex">
+                    <p className="text-white font-bold text-xl">EN</p>
+                    <Image src="/bg/world.svg" width={30} height={30} alt="world icon" />
+                </div>
                 <Link href="/" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md">
                     Launch dApp {'>'}
                 </Link>
