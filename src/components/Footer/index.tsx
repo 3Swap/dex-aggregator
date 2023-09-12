@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { PiCaretRightBold } from 'react-icons/pi'
 
 export const Footer = () => {
     return (
@@ -7,7 +8,7 @@ export const Footer = () => {
                 <h3 className="font-bold sm:text-3xl Nunito_Sans text-center">Subscribe to Synoptic Finance newsletter</h3>
                 <p>Get the latest news and updates</p>
                 <Link href="" className="inline-flex justify-center gap-x-1 py-4 sm:px-[5rem] px-12 border rounded-[20px] border-white items-center sm:text-semibold text-sm">
-                    Subscribe {'>'}
+                    Subscribe <PiCaretRightBold />
                 </Link>
             </div>
             <p className="text-[#1E1E1E]/50 font-medium text-md">&copy; 2023 Synoptic Finance, All Rights Reserved.</p>
