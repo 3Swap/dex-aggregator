@@ -2,7 +2,8 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import Link from 'next/link';
+import Link from 'next/link'; 
+
 
 export default function Home() {
   const features = [
@@ -35,7 +36,7 @@ export default function Home() {
             <span className='text-[#4500A0] font-bold'>Trade with Unprecedented <br />
               Freedom</span> - The Decentralized <br />
             Exchange Revolution</h2>
-          <Link href="/" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md">Launch dApp</Link>
+          <Link href="/swap" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md">Launch dApp</Link>
         </div>
         <div className='ml-auto sm:mb-[-10rem] mb-[4rem]'>
           <Image src="/bg/planet.svg" width={1096} height={722} alt='planet image' className='' />
