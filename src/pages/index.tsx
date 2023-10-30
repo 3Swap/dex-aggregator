@@ -29,7 +29,7 @@ export default function Home() {
         <title>3Swap | Dex Aggregator</title>
       </Head>
       <div className="w-full flex flex-col justify-stretch items-center pb-[15rem] relative">
-        <Navbar />
+        <Navbar visibleLink={true} />
         <Image src="/bg/planet-cut.svg" width={558} height={722} alt='Planet' className='absolute top-0 left-0 z-0' />
         <div className='w-full p-5 mb-[-20rem] flex flex-col items-start gap-y-5 z-10'>
           <h2 className='text-5xl leading-[4.5rem] text-white mt-[4rem]'>
