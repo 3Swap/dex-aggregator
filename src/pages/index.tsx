@@ -43,7 +43,7 @@ export default function Home() {
         </div>
         <h3 className='sm:text-4xl text-xl font-extrabold text-center text-white'>DeFi / DEX aggregator with the most<br />
           liquidity and the best rates on<br />
-          <span className='text-[#4500A0]'>Bitgert, Base chains , EVM</span></h3>
+          <span className='text-[#4500A0]'>VinuChain, Base chains , EVM</span></h3>
       </div>
       <div className='w-full'>
         <div className="bg-[url('/bg/3d.png')] h-[85vh] w-full bg-no-repeat bg-center bg-cover flex items-center justify-center sm:gap-x-10 gap-y-5 sm:flex-row flex-col p-5">
@@ -61,7 +61,7 @@ export default function Home() {
           })}
         </div>
         <div className='flex justify-center my-[15rem]'>
-          <h2 className='text-5xl font-bold text-white text-center'>First DEFI aggregator on bitgert</h2>
+          <h2 className='text-5xl font-bold text-white text-center'>First DEFI aggregator on VinuChain</h2>
         </div>
         <Footer />
       </div>

@@ -1,5 +1,7 @@
-import { LiFiWidget } from '@lifi/widget';
-const widgetConfig = {
+import { LiFiWidget, WidgetConfig } from '@lifi/widget';
+const widgetConfig: WidgetConfig = {
+    variant: 'expandable',
+    integrator: '3swap',
     containerStyle: {
         border: '1px solid rgb(234, 234, 234)',
         borderRadius: '16px',
