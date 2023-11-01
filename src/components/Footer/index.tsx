@@ -3,7 +3,7 @@ import { PiCaretRightBold } from 'react-icons/pi'
 
 export const Footer = () => {
     return (
-        <div className=" h-fit py-[3.5rem] sm:px-10 px-7 w-full flex justify-center flex-col items-center gap-y-2 text-white">
+        <div className="h-fit py-[3.5rem] sm:px-10 px-7 w-full flex justify-center flex-col items-center gap-y-2 text-white">
             <div className="bg-[#4500A0]/50 sm:h-[25vh] h-[45vh] w-[85%] mx-auto flex flex-col items-center justify-center gap-y-3">
                 <h3 className="font-bold sm:text-3xl Nunito_Sans text-center">Subscribe to 3Swap newsletter</h3>
                 <p>Get the latest news and updates</p>
