@@ -86,7 +86,7 @@ export default function Navbar({ visibleLink }: any) {
                                 if (element.type === "link") {
                                     const { url, title, icon } = element;
                                     return (
-                                        <Link className="flex gap-x-3 items-center justify-first py-2 px-3 rounded-md text-white w-full hover:bg-[#fff]/[.11]" href={url ? url : '/'}>
+                                        <Link className="flex gap-x-3 items-center justify-first py-2 px-3 rounded-md text-white w-full hover:bg-[#fff]/[.11]" href={url ? url : '/'} key={index}>
                                             {icon}
                                             {title}
                                         </Link>
