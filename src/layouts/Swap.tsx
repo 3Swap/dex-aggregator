@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/Navbar/exchange"
-import { Footer } from "@/components/Footer/exchange"
+import Navbar from "@/components/Navbar"
+import { Footer } from "@/components/Footer"
 
 
 export default function Layout({ children }: any) {
