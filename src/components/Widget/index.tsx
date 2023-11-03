@@ -1,23 +1,25 @@
 import { LiFiWidget, WidgetConfig } from '@lifi/widget';
+
 const widgetConfig: WidgetConfig = {
     variant: 'expandable',
     integrator: '3swap',
     containerStyle: {
-        border: '1px solid rgb(234, 234, 234)',
         borderRadius: '16px',
+        boxShadow: '0px 8px 32px rgba(0, 0, 0, 0.08)',
     },
     theme: {
         palette: {
-            primary: { main: '#7B3FE4' },
+            primary: { main: '#1E1E1E' },
             secondary: { main: '#F5B5FF' },
             background: {
-                paper: '#000000', // bg color for cards
-                default: '#000000', // bg color container
+                paper: '#6366F1', // bg color for cards
+                default: '#6366F1', // bg color container
             },
-            grey: {
-                300: '#000000', // border light theme
-                800: '#000000', // border dark theme
-            },
+        },
+        typography: {
+            body1: {
+                color: '#fff'
+            }
         },
     },
 };

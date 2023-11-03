@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import Link from 'next/link'; 
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -32,8 +32,8 @@ export default function Home() {
         <Navbar visibleLink={true} />
         <Image src="/bg/planet-cut.svg" width={558} height={722} alt='Planet' className='absolute top-0 left-0 z-0' />
         <div className='w-full p-5 mb-[-20rem] flex flex-col items-start gap-y-5 z-10'>
-          <h2 className='text-5xl leading-[4.5rem] text-white mt-[4rem]'>
-            <span className='text-[#4500A0] font-bold'>Trade with Unprecedented <br />
+          <h2 className='text-6xl leading-[4.5rem] text-white mt-[4rem]'>
+            <span className='text-[#4500A0] drop-shadow-md shadow-[#4500A0] font-bold'>Trade with Unprecedented <br />
               Freedom</span> - The Decentralized <br />
             Exchange Revolution</h2>
           <Link href="/swap" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md">Launch dApp</Link>
