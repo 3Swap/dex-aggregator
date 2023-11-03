@@ -55,7 +55,7 @@ export default function Navbar({ visibleLink }: any) {
                     <p className="text-white font-bold text-xl">EN</p>
                     <Image src="/bg/world.svg" width={30} height={30} alt="world icon" />
                 </div>
-                <Link href="/swap" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md inline-flex items-center">
+                <Link href="/exchange" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md inline-flex items-center">
                     Launch dApp <PiCaretRightBold />
                 </Link>
             </div>

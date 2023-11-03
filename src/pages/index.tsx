@@ -11,7 +11,7 @@ export default function Home() {
       title: "DEX Made Easy",
       subtitle: 'Fast and Secure Exchange of Digital Assets',
       paragraph: "Our platform provides a seamless and  secure way to exchange your digital assets Embrace the future of finance with easy cryptocurrency swapping.",
-      linkURl: '/swap',
+      linkURl: '/exchange',
       linkTitle: "Swap"
     },
     {
@@ -36,7 +36,7 @@ export default function Home() {
             <span className='text-[#4500A0] drop-shadow-md shadow-[#4500A0] font-bold'>Trade with Unprecedented <br />
               Freedom</span> - The Decentralized <br />
             Exchange Revolution</h2>
-          <Link href="/swap" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md">Launch dApp</Link>
+          <Link href="/exchange" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md">Launch dApp</Link>
         </div>
         <div className='ml-auto sm:mb-[-10rem] mb-[4rem]'>
           <Image src="/bg/planet.svg" width={1096} height={722} alt='planet image' className='' />
