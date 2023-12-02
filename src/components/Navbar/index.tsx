@@ -6,6 +6,7 @@ import { TfiMenu } from 'react-icons/tfi'
 import { BsFillMoonFill, BsDiscord } from 'react-icons/bs'
 import { RiTwitterXFill } from 'react-icons/ri'
 import { AiFillInfoCircle } from 'react-icons/ai'
+import { FaTelegramPlane } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
 
@@ -16,16 +17,16 @@ export const links = [
         icon: <BsFillMoonFill size={24} color="#fff" />
     },
     {
-        url: 'https://twitter.com',
+        url: 'https://x.com/vefdefi?t=tJZF3rr5Btl_gZrWRnNB2g&s=09',
         type: "link",
         title: 'Twitter',
         icon: <RiTwitterXFill size={24} color="#fff" />
     },
     {
-        url: 'https://discord.com',
+        url: 'https://t.me/VefDefi',
         type: "link",
-        title: 'Discord',
-        icon: <BsDiscord size={24} color="#fff" />
+        title: 'Telegram',
+        icon: <FaTelegramPlane size={24} color="#fff" />
     },
     {
         url: '/',
@@ -55,7 +56,7 @@ export default function Navbar({ visibleLink }: any) {
                     <p className="text-white font-bold text-xl">EN</p>
                     <Image src="/bg/world.svg" width={30} height={30} alt="world icon" />
                 </div>
-                <Link href="/exchange" className="px-6 py-2 bg-[#4500A0] text-white rounded-lg shadow-md inline-flex items-center">
+                <Link href="/exchange" className="px-6 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-md inline-flex items-center">
                     Launch dApp <PiCaretRightBold />
                 </Link>
             </div>
