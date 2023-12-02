@@ -60,8 +60,9 @@ export default function Home() {
             )
           })}
         </div>
-        <div className='flex justify-center my-[15rem]'>
-          <h2 className='text-5xl font-bold text-white text-center'>First DEFI aggregator on VinuChain</h2>
+        <div className='flex flex-col items-center justify-center my-[15rem]'>
+          <h2 className='text-5xl font-extrabold text-white text-center'>First DEFI aggregator <br /> on VinuChain</h2>
+          <p className='text-white text-3xl'>Coming soon</p>
         </div>
         <Footer />
       </div>
