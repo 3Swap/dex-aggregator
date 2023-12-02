@@ -1153,6 +1153,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@onramp.money/onramp-web-sdk@^1.4.6":
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/@onramp.money/onramp-web-sdk/-/onramp-web-sdk-1.4.6.tgz#f926109f3adff3c64e13c85465b28bfd0fc953d1"
+  integrity sha512-BzjJZdHbS8r6cF71a2EtN4nHYnMQ6u/sIZBu+kLHEXkO3vKF6iVfJ7FJodE0xuT0ADuQt6AxXa6vgJhOPPW/4A==
+
 "@popperjs/core@^2.11.8":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
@@ -2033,6 +2038,11 @@ available-typed-arrays@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
+
+awesome-toast-component@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/awesome-toast-component/-/awesome-toast-component-2.0.6.tgz#d80db624cdb9f3aa245f5ce7b47c5ac09a71e552"
+  integrity sha512-6RjeS+vdlpjyTkGeTDvDwUUghQbcpcbCI68Uy8YoqSclnZyaUIQvIGjNQHWVejYSFyQjlN7nG/ifrwBPCeCd1g==
 
 axe-core@^4.6.2:
   version "4.8.1"
