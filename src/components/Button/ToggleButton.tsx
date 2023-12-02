@@ -16,7 +16,7 @@ export default function ToggleButton({ isActive, onClick, children }: IToggleBut
         exit={{ opacity: 0 }}
         transition={{ duration: 0.2 }}
         className={`${isActive ? 'bg-gradient-to-r from-indigo-600 to-purple-600 rounded-[30px] text-[#fff]' : 'bg-transparent text-[#fff]'
-          } py-4 px-6 flex justify-center text-[1.3em] font-Syne font-[400]`}
+          } py-3 px-6 flex justify-center text-[1.2em] font-Syne font-[400]`}
         onClick={onClick}
       >
         {children}
