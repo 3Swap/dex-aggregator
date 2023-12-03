@@ -32,7 +32,7 @@ export default function Home() {
         <Navbar visibleLink={true} />
         <Image src="/bg/planet-cut.svg" width={558} height={722} alt='Planet' className='absolute top-0 left-0 z-0' />
         <div className='w-full p-5 mb-[-20rem] flex flex-col items-start gap-y-5 z-10'>
-          <h2 className='text-6xl leading-[4.5rem] text-white mt-[4rem]'>
+          <h2 className='sm:text-6xl text-4xl sm:leading-[4.5rem] leading-[3rem] text-white mt-[4rem]'>
             <span className='bg-gradient-to-r from-indigo-600 to-purple-600 drop-shadow-md bg-clip-text text-transparent shadow-purple-600 font-extrabold'>Trade with Unprecedented <br />
               Freedom</span> - The Decentralized <br />
             Exchange Revolution</h2>
