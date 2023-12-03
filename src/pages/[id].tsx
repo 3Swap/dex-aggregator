@@ -30,11 +30,11 @@ const Swap = () => {
                     <ToggleButton isActive={route === Route.LIFI} onClick={() => push(`/${Route.LIFI}`)}>
                         <span>Exchange</span>
                     </ToggleButton>
-                    <ToggleButton isActive={route === Route.STAKING} onClick={() => push(`/${Route.STAKING}`)}>
-                        <span>Staking Pool</span>
-                    </ToggleButton>
                     <ToggleButton isActive={route === Route.ORAMPER} onClick={() => push(`/${Route.ORAMPER}`)}>
                         <span>Buy</span>
+                    </ToggleButton>
+                    <ToggleButton isActive={route === Route.STAKING} onClick={() => push(`/${Route.STAKING}`)}>
+                        <span>Staking Pool</span>
                     </ToggleButton>
                 </div>
             </div>
