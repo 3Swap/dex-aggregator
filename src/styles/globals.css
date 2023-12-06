@@ -8,7 +8,7 @@ body{
 
 /* For WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
