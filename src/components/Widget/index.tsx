@@ -55,7 +55,7 @@ export const Widget = () => {
             }
         },
         appearance: 'dark',
-        fee: 0.03
+        fee: 0.08
     }), []);
 
     return (
