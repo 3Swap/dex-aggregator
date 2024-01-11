@@ -17,7 +17,7 @@ const Swap = () => {
     const { query, push } = useRouter();
     const { id } = query
     const RenderedChild = useTabRerouter(id as Route);
-    const route = useMemo(() => (id as Route) || Route.ORAMPER, [id])
+    const route = useMemo(() => (id as Route) || Route.LIFI, [id])
 
     return (
         <div className="flex justify-start items-center h-screen flex-col">
