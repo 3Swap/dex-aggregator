@@ -24,7 +24,7 @@ export const useTabRerouter = (routes: Route) => {
                 setComponent(() => Staking);
                 break;
             default:
-                setComponent(() => Oramper);
+                setComponent(() => LiFiWidgetNext);
                 break;
         }
     }, [routes])

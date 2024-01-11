@@ -18,7 +18,7 @@ export const Oramper = () => {
             transition={{ duration: 0.2 }}
         >
             {isLoading && <LoadingIndicator />}
-            <iframe src="https://onramp.money/main/sell/?appId=761602"
+            <iframe src="https://onramp.money/main/buy/?appId=761602"
                 className='rounded-lg h-screen w-[375px] shadow-md'
                 onLoad={handleIframeLoad}
                 style={{ display: isLoading ? 'none' : 'block' }}
