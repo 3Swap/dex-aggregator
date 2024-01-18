@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@lifi/widget": "^2.7.1",
+    "@lifi/sdk": "^2.5.0",
+    "@lifi/widget": "^2.10.0",
+    "@mui/icons-material": "^5.14.19",
+    "@mui/material": "^5.14.20",
     "@onramp.money/onramp-web-sdk": "^1.4.6",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",

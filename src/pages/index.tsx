@@ -3,6 +3,9 @@ import Head from 'next/head';
 import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import { NavbarTabs } from '@/components/HomeSwap/SwapHomeTab';
+import IconTabs from '@/components/HomeSwap/ThisGuy';
+import { WidgetPage } from '@/components/HomeSwap/LifiWidget';
 
 
 export default function Home() {
@@ -41,9 +44,14 @@ export default function Home() {
         <div className='ml-auto sm:mb-[-10rem] mb-[4rem]'>
           <Image src="/bg/planet.svg" width={1096} height={722} alt='planet image' className='' />
         </div>
-        <h3 className='sm:text-4xl text-xl font-extrabold text-center text-white'>DeFi / DEX aggregator with the most<br />
+        {/* <h3 className='sm:text-4xl text-xl font-extrabold text-center text-white'>DeFi / DEX aggregator with the most<br />
           liquidity and the best rates on<br />
-          <span className='bg-gradient-to-r from-indigo-600 to-purple-600 drop-shadow-md bg-clip-text text-transparent'>VinuChain, Base chains , EVM</span></h3>
+          <span className='bg-gradient-to-r from-indigo-600 to-purple-600 drop-shadow-md bg-clip-text text-transparent'>VinuChain, Base chains , EVM</span></h3> */}
+
+          <div>
+            <IconTabs/>
+            {/* <WidgetPage/> */}
+          </div>
       </div>
       <div className='w-full'>
         <div className="bg-[url('/bg/3d.png')] h-[85vh] w-full bg-no-repeat bg-center bg-cover flex items-center justify-center sm:gap-x-10 gap-y-5 sm:flex-row flex-col p-5">
