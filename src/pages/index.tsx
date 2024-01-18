@@ -3,9 +3,7 @@ import Head from 'next/head';
 import { Footer } from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import { NavbarTabs } from '@/components/HomeSwap/SwapHomeTab';
 import IconTabs from '@/components/HomeSwap/ThisGuy';
-import { WidgetPage } from '@/components/HomeSwap/LifiWidget';
 
 
 export default function Home() {
@@ -50,7 +48,6 @@ export default function Home() {
 
           <div>
             <IconTabs/>
-            {/* <WidgetPage/> */}
           </div>
       </div>
       <div className='w-full'>
