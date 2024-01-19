@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 import EvStationOutlinedIcon from "@mui/icons-material/EvStationOutlined";
@@ -6,7 +8,9 @@ import { useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import NewWidget from "./NewWidget";
 import { CustomTabPanel, TabCell, TabsContainer, a11yProps } from ".";
-import axios from "axios";
+import WidgetFrom from "./WidgetFrom";
+import { Chain, ChainsResponse, Token, TokensObject } from "@/utils/types";
+import { getChains, getTokens } from "@/utils/helpers";
 
 export default function IconTabs() {
   const theme = useTheme();
@@ -16,15 +20,47 @@ export default function IconTabs() {
     setValue(newValue);
   };
 
-  const getChains = async () => {
-    // this is for requesting for the supported chains!
-    const optionalChainTypes = "EVM";
-    const result = await axios.get("https://li.quest/v1/chains", {
-      params: { chainTypes: optionalChainTypes },
-    });
-    console.log("this is your result", result);
-    return result.data;
+  const [chains, setChains] = React.useState<ChainsResponse | null>(null);
+  const [tokens, setTokens] = React.useState<TokensObject | null>(null);
+
+  const [selectedChainState, setSelectedChainState] =
+    React.useState<Chain | null>(null);
+
+  const [selectedTokenState, setSelectedTokenState] =
+    React.useState<Token | null>(null);
+
+  React.useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const chainsData = await getChains();
+        setChains(chainsData);
+
+        const tokensData = await getTokens();
+        setTokens(tokensData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleSelectChain = (selectedChain: Chain) => {
+    console.log("Selected Chain:", selectedChain);
+    setSelectedChainState(selectedChain);
+    if (selectedTokenState !== null) {
+      setShowFrom(0);
+    }
   };
+  const handleSelectToken = (selectedToken: Token) => {
+    console.log("Selected Token:", selectedToken);
+    setSelectedTokenState(selectedToken);
+    if (selectedChainState !== null) {
+      setShowFrom(0);
+    }
+  };
+
+  const [showFrom, setShowFrom] = React.useState(0);
 
   return (
     <Box
@@ -105,11 +141,29 @@ export default function IconTabs() {
         />
       </TabsContainer>
 
-      <CustomTabPanel value={value} index={0}>
-        <NewWidget title="Exchange" />
-      </CustomTabPanel>
+      {showFrom === 0 && (
+        <CustomTabPanel value={value} index={0}>
+          <NewWidget
+            title="Exchange"
+            onClickFrom={() => setShowFrom(1)}
+            selectedChainState={selectedChainState}
+            selectedTokenState={selectedTokenState}
+          />
+        </CustomTabPanel>
+      )}
+      {showFrom === 1 && (
+        <CustomTabPanel value={value} index={0}>
+          <WidgetFrom
+            onClickFrom={() => setShowFrom(0)}
+            onSelectChain={handleSelectChain}
+            onSelectToken={handleSelectToken}
+            chains={chains}
+            tokens={tokens}
+          />
+        </CustomTabPanel>
+      )}
       <CustomTabPanel value={value} index={1}>
-        <NewWidget title="Gas" />
+        {/* <NewWidget title="Gas" /> */}
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         Item Three
