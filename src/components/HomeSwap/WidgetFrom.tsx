@@ -12,6 +12,7 @@ function WidgetFrom({
   tokens,
   onSelectChain,
   onSelectToken,
+  action,
 }: WidgetFormprops) {
   const [searchText, setSearchText] = React.useState("");
 
@@ -20,13 +21,16 @@ function WidgetFrom({
   const [hoveredTokens, handleMouseEnterToken, handleMouseLeaveToken] =
     useHoverState();
 
+  const [focusedChain, setFocusedChain] = React.useState<number | null>(null);
+  const [focusedToken, setFocusedToken] = React.useState<number | null>(null);
+
   return (
     <div className=" flex flex-col gap-6">
       <div className=" flex justify-center items-center relative">
         <div onClick={onClickFrom} className=" absolute left-0">
           <ArrowBackIcon style={{ fontSize: "30px" }} />
         </div>
-        <h1 className=" font-bold text-xl">Exchange from</h1>
+        <h1 className=" font-bold text-xl">Exchange {action}</h1>
       </div>
 
       <div className=" grid grid-cols-5 gap-4">
@@ -35,8 +39,13 @@ function WidgetFrom({
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
             key={dchain?.id}
-            onClick={() => onSelectChain && onSelectChain(dchain)}
-            className=" bg-gray-500/30 hover:bg-purple-500/30 border border-purple-600/30 rounded-xl w-16 h-16 flex justify-center items-center relative"
+            onClick={() => {
+              onSelectChain && onSelectChain(dchain);
+              setFocusedChain(index);
+            }}
+            className={` ${
+              focusedChain === index && "bg-purple-500/30"
+            }  bg-gray-500/30 hover:bg-purple-500/30 border border-purple-600/30 rounded-xl w-16 h-16 flex justify-center items-center relative`}
           >
             <img
               src={dchain?.logoURI}
@@ -91,11 +100,16 @@ function WidgetFrom({
               <div key={chainId} className=" w-[23rem] flex flex-col gap-4">
                 {filteredTokens.map((dtoken: Token, index: number) => (
                   <div
-                    className="flex gap-6 p-3 rounded-2xl items-center hover:bg-purple-500/30"
+                    className={` ${
+                      focusedToken === index && "bg-purple-500/30"
+                    } flex gap-6 p-3 rounded-2xl items-center hover:bg-purple-500/30`}
                     onMouseEnter={() => handleMouseEnterToken(index)}
                     onMouseLeave={() => handleMouseLeaveToken(index)}
                     key={dtoken.address}
-                    onClick={() => onSelectToken && onSelectToken(dtoken)}
+                    onClick={() => {
+                      onSelectToken && onSelectToken(dtoken);
+                      setFocusedToken(index);
+                    }}
                   >
                     {dtoken.logoURI ? (
                       <img

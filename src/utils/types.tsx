@@ -4,6 +4,7 @@ export type WidgetFormprops = {
   onSelectToken: (token: Token) => void;
   chains: ChainsResponse | null;
   tokens: TokensObject | null;
+  action: String;
 };
 
 export type Chain = {
