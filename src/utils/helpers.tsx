@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ChainsResponse, TokensObject } from "./types";
+import { BridgesAndExchangesResponse, ChainsResponse, TokensObject } from "./types";
 
 export const getChains = async () => {
   const optionalChainTypes = "EVM";
@@ -20,6 +20,13 @@ export const getTokens = async () => {
     },
   });
 
+  return result.data;
+};
+
+export const getTools = async () => {
+  const result = await axios.get<BridgesAndExchangesResponse>(
+    "https://li.quest/v1/tools"
+  );
   return result.data;
 };
 
