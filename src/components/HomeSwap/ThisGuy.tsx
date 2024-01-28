@@ -21,13 +21,13 @@ const createInitialState = (): TabState => ({
   selectedToken: null,
 });
 
-export default function IconTabs() {
+export default function IconTabs({value, setValue, handleValueChange}: {value: number, setValue: React.Dispatch<React.SetStateAction<number>>, handleValueChange: (event: React.SyntheticEvent, newValue: number) => void}) {
   const theme = useTheme();
-  const [value, setValue] = React.useState(0);
+  // const [value, setValue] = React.useState(2);
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
+  // const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  //   setValue(newValue);
+  // };
 
   const [chains, setChains] = React.useState<ChainsResponse | null>(null);
   const [tokens, setTokens] = React.useState<TokensObject | null>(null);
@@ -151,11 +151,12 @@ export default function IconTabs() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        zIndex: 20,
       }}
     >
       <TabsContainer
         value={value}
-        onChange={handleChange}
+        onChange={handleValueChange}
         aria-label="icon tabs example"
       >
         {[
@@ -180,7 +181,7 @@ export default function IconTabs() {
         ))}
       </TabsContainer>
 
-      <div className=" flex flex-col tablet:flex-row gap-8">
+      <div className=" flex flex-col tablet:flex-row gap-8 z-20">
         <TabBody
           tabIndex={0}
           title="Exchange"
@@ -210,7 +211,6 @@ export default function IconTabs() {
                 <div className=" flex justify-between items-center">
                   <h1 className=" font-bold text-[28px]">You get</h1>
                 </div>
-                
               </div>
             </CustomTabPanel>
           )}

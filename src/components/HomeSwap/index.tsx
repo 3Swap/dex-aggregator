@@ -16,6 +16,7 @@ export const TabsContainer = styled(Tabs, {
   padding: 1,
   alignItems: "center",
   borderRadius: "35px",
+  zIndex: "30",
 
   ".MuiTabs-flexContainer": {
     alignItems: "center",
@@ -52,12 +53,12 @@ export const TabCell = styled(Tab, {
   margin: theme.spacing(0.75, 0.75),
   background: "transparent",
   minHeight: "unset",
-  color: "white",
+  color: "black",
   textDecoration: "none",
   borderRadius: "35px",
   "&.Mui-selected": {
-    color: "white",
-    backgroundColor: "darkgray",
+    color: "black",
+    backgroundColor: "white",
   },
 
   ":hover": {
@@ -92,7 +93,7 @@ export function CustomTabPanel(props: TabPanelProps) {
       className={` ${
         what === "Exchange"
           ? " mt-16"
-          : " mt-24 min-w-fit rounded-[16px] bg-black/30 text-white"
+          : " mt-24 min-w-[392px] rounded-[16px] bg-white text-black shadow-2xl z-50"
       }  lmin-w-[450px]`}
     >
       {value === index && <Box sx={{ p: 4 }}>{children}</Box>}

@@ -58,3 +58,28 @@ export type Token = {
 export type TokensObject = {
   [key: string]: Token[];
 };
+
+export type ChainPair = {
+  fromChainId: number;
+  toChainId: number;
+};
+
+export type Bridge = {
+  key: string;
+  name: string;
+  logoURI: string;
+  supportedChains: ChainPair[];
+};
+
+export type Exchange = {
+  key: string;
+  name: string;
+  logoURI: string;
+  supportedChains: number[];
+};
+
+export type BridgesAndExchangesResponse = {
+  bridges: Bridge[];
+  exchanges: Exchange[];
+};
+

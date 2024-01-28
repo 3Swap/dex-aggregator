@@ -25,7 +25,7 @@ function WidgetFrom({
   const [focusedToken, setFocusedToken] = React.useState<number | null>(null);
 
   return (
-    <div className=" flex flex-col gap-6">
+    <div className=" flex flex-col gap-6 z-20">
       <div className=" flex justify-center items-center relative">
         <div onClick={onClickFrom} className=" absolute left-0">
           <ArrowBackIcon style={{ fontSize: "30px" }} />
