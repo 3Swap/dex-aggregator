@@ -28,7 +28,7 @@ function NewWidget({
   HandlePaymentAmount,
 }: NewWidgetProps) {
   return (
-    <div className=" flex flex-col mx-auto gap-6 min-w-[392px] tablet:max-w-xs">
+    <div className=" flex flex-col mx-auto gap-6 min-w-full tablet:min-w-[392px] ltablet:max-w-xs">
       <div className=" flex justify-between items-center">
         <h1 className=" font-bold text-[28px]">{title}</h1>
         <SettingsIcon style={{ fontSize: "30px" }} />
@@ -197,7 +197,7 @@ function NewWidget({
       </div>
 
       <div className=" flex flex-col tablet:flex-row gap-3">
-        <button className=" w-full py-4 grow rounded-full font-semibold text-lg bg-purple-500/70 text-white">
+        <button className=" w-full py-4 grow rounded-full font-bold text-lg bg-[#270061] text-white">
           Connect wallet
         </button>
         <button className=" p-4 rounded-full bg-[#F3EBFF]">

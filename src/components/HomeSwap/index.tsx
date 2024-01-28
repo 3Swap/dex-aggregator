@@ -93,8 +93,8 @@ export function CustomTabPanel(props: TabPanelProps) {
       className={` ${
         what === "Exchange"
           ? " mt-16"
-          : " mt-24 min-w-[392px] rounded-[16px] bg-white text-black shadow-2xl z-50"
-      }  lmin-w-[450px]`}
+          : " mt-24 min-w-[320px] tablet:min-w-[392px] rounded-[16px] bg-white text-black shadow-2xl z-50"
+      } `}
     >
       {value === index && <Box sx={{ p: 4 }}>{children}</Box>}
     </div>

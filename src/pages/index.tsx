@@ -7,7 +7,6 @@ import IconTabs from "@/components/HomeSwap/ThisGuy";
 import React from "react";
 import { BridgesAndExchangesResponse, ChainsResponse } from "@/utils/types";
 import { getChains, getTools } from "@/utils/helpers";
-import { log } from "console";
 
 export default function Home() {
   const [value, setValue] = React.useState(0);
@@ -125,12 +124,12 @@ export default function Home() {
           <div
             className={` ${
               !showWidgetCover && "hidden"
-            } absolute w-screen h-[70vh] top-[30%] left-[0%] z-30 bg-gradient-to-t from-purple-200 via-purple-200 to-transparent backdrop-blur-sm flex flex-col justify-center items-center gap-8`}
+            } absolute w-screen h-[70vh] bottom-0 left-[0%] z-30 bg-gradient-to-t from-purple-200 via-purple-200 to-transparent backdrop-blur-sm flex flex-col justify-center items-center gap-8`}
           >
-            <h1 className=" text-[54px] font-[750] bg-gradient-to-l from-[#31007A] to-[#8700B8] bg-clip-text text-transparent">
+            <h1 className=" text-4xl tablet:text-[54px] font-[750] bg-gradient-to-l from-[#31007A] to-[#8700B8] bg-clip-text text-transparent">
               Find the best route
             </h1>
-            <p className=" font-medium text-[28px]">
+            <p className=" font-medium text-xl text-center tablet:text-[28px]">
               <span className=" font-extrabold">4x audited </span>multi-chain
               liquidity aggregator powered by{" "}
               <span className=" font-extrabold">LI.FI</span>
@@ -138,7 +137,7 @@ export default function Home() {
 
             <div className=" flex justify-center gap-5">
               {dummyArr.map((item, index) => (
-                <div className=" flex flex-col gap-1 justify-center items-center py-7 px-11 shadow-md rounded-2xl bg-white">
+                <div className=" flex flex-col gap-1 justify-center items-center tablet:py-7 py-4 tablet:px-11 px-6 shadow-md rounded-2xl bg-white">
                   <p className=" font-bold text-4xl">{item.number}</p>
                   <p className=" text-lg font-medium">{item.value}</p>
                 </div>
