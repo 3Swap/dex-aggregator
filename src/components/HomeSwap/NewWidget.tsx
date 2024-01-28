@@ -28,7 +28,7 @@ function NewWidget({
   HandlePaymentAmount,
 }: NewWidgetProps) {
   return (
-    <div className=" flex flex-col mx-auto gap-6 min-w-full tablet:min-w-[392px] ltablet:max-w-xs">
+    <div className=" flex flex-col mx-auto gap-6 min-w-[320px] tablet:min-w-[392px] ltablet:max-w-xs">
       <div className=" flex justify-between items-center">
         <h1 className=" font-bold text-[28px]">{title}</h1>
         <SettingsIcon style={{ fontSize: "30px" }} />
