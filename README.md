@@ -1,38 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
+
+[![license](https://img.shields.io/badge/license-Apache%202-blue)](/LICENSE.md)
+[![Crowdin](https://badges.crowdin.net/jumper-exchange/localized.svg)](https://crowdin.com/project/jumper-exchange)
+[![Follow on Twitter](https://img.shields.io/twitter/follow/JumperExchange.svg?label=follow+Jumper.Exchange)](https://twitter.com/JumperExchange)
+
+</div>
+
+# Jumper.Exchange
+
+This is the [jumper.exchange](https://jumper.exchange) repository that gets deployed to `develop.jumper.exchange`, `staging.jumper.exchange` and `jumper.exchange`.
 
 ## Getting Started
 
-First, run the development server:
+In the root directory run the following commands to get started:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+to install all dependencies, and choose one of these start commands to start the development vite server and to start building packages in watch mode.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```
+yarn dev
+yarn dev:local
+yarn dev:testnet
+yarn dev:staging
+yarn dev:production
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Please refer to the following descriptions of the dev serve scripts:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+    dev - starts the app using the backend develop stage
+    dev:local - starts the app using a locally running backend
+    dev:testnet - starts the app in a testnet only mode using the backend staging stage
+    dev:staging - starts the app using the backend staging stage
+    dev:production - starts the app using the backend production stage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Husky Scripts
 
-## Learn More
+In addition to these commands you should also run
 
-To learn more about Next.js, take a look at the following resources:
+```
+yarn husky install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+if you plan to commit to this repository to use all necessary husky hooks. If you have trouble running a script try modifying the permissions for the scripts with
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+chmod ug+x .husky/
+```
 
-## Deploy on Vercel
+to mark them as executables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### lint-staged
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+small comment on the lint-staged config. The idea of invoking `tsc --noEmit` from bash instead of yarn comes from here: [github issue](https://github.com/lint-staged/lint-staged/issues/825#issuecomment-674575655)
+It fixes some problems we had with lint-staged ignoring our tsconfig and not working properly.
