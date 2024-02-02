@@ -58,7 +58,7 @@ export default function Home3Swap({
           </div>
         </div>
 
-        <div id="widget" className=" w-screen">
+        <div id="widget" className=" min-h-screen w-screen relative">
           {children}
         </div>
       </div>

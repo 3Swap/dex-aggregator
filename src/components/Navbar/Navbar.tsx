@@ -17,11 +17,11 @@ export const Navbar = () => {
 
   return (
     <Container>
-      <LogoLink onClick={handleClick}>
+      {/* <LogoLink onClick={handleClick}>
         <Logo isConnected={!!account.address} theme={theme} />
-      </LogoLink>
+      </LogoLink> */}
       <NavbarTabs />
-      <NavbarButtons />
+      {/* <NavbarButtons /> */}
     </Container>
   );
 };
