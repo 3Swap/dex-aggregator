@@ -1,14 +1,8 @@
 <div align="center">
 
-[![license](https://img.shields.io/badge/license-Apache%202-blue)](/LICENSE.md)
-[![Crowdin](https://badges.crowdin.net/jumper-exchange/localized.svg)](https://crowdin.com/project/jumper-exchange)
-[![Follow on Twitter](https://img.shields.io/twitter/follow/JumperExchange.svg?label=follow+Jumper.Exchange)](https://twitter.com/JumperExchange)
-
 </div>
 
-# Jumper.Exchange
-
-This is the [jumper.exchange](https://jumper.exchange) repository that gets deployed to `develop.jumper.exchange`, `staging.jumper.exchange` and `jumper.exchange`.
+# 3Swap
 
 ## Getting Started
 
@@ -51,8 +45,3 @@ chmod ug+x .husky/
 ```
 
 to mark them as executables
-
-### lint-staged
-
-small comment on the lint-staged config. The idea of invoking `tsc --noEmit` from bash instead of yarn comes from here: [github issue](https://github.com/lint-staged/lint-staged/issues/825#issuecomment-674575655)
-It fixes some problems we had with lint-staged ignoring our tsconfig and not working properly.
