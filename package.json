@@ -11,6 +11,7 @@
   "dependencies": {
     "@lifi/widget": "^2.7.1",
     "@onramp.money/onramp-web-sdk": "^1.4.6",
+    "@rango-dev/widget-embedded": "^0.23.0",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
