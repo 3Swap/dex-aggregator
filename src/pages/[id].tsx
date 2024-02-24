@@ -7,17 +7,17 @@ import ToggleButton from '@/components/Button/ToggleButton';
 import { AnimatePresence } from "framer-motion";
 
 enum Route {
-    LIFI = 'exchange',
+    LIFI = 'lifi',
     ORAMPER = 'oramper',
     STAKING = 'staking-pool',
-    RANGO = 'rango' 
+    RANGO = 'exchange' 
 }
 
 const Swap = () => {
     const { query, push } = useRouter();
     const { id } = query;
     const RenderedChild = useTabRerouter(id as Route);
-    const route = useMemo(() => (id as Route) || Route.LIFI, [id]);
+    const route = useMemo(() => (id as Route) || Route.RANGO, [id]);
     
     // State for the secondary selection within the 'Exchange' option
     const [exchangeOption, setExchangeOption] = useState('Rango');
@@ -41,7 +41,7 @@ const Swap = () => {
             <div className="flex justify-center items-center py-12 w-full flex-col">
                 {/* Main toggle buttons */}
                 <div className="flex justify-center items-center rounded-[30px] bg-[#fff]/[.11] py-1 px-1">
-                    <ToggleButton isActive={route === Route.RANGO || route === Route.LIFI} onClick={() => push(`/${Route.LIFI}`)}>
+                    <ToggleButton isActive={route === Route.RANGO || route === Route.LIFI} onClick={() => push(`/${Route.RANGO}`)}>
                         <span>Exchange</span>
                     </ToggleButton>
                     <ToggleButton isActive={route === Route.ORAMPER} onClick={() => push(`/${Route.ORAMPER}`)}>

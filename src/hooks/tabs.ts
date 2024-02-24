@@ -4,10 +4,10 @@ import { Oramper } from "@/components/Oramper"
 import { Staking } from "@/components/Staking"
 
 enum Route {
-    LIFI = 'exchange',
+    LIFI = 'lifi',
     ORAMPER = 'oramper',
     STAKING = 'staking-pool',
-    RANGO = 'rango'
+    RANGO = 'exchange'
 }
 
 export const useTabRerouter = (routes: Route) => {
