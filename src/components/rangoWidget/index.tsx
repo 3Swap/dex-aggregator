@@ -15,7 +15,7 @@ export const App = () => {
             colors: {
                 dark: {
                     neutral: '#6365f1a3',
-                    primary: '#FFF',
+                    primary: '#1E25A4',
                     secondary: '#FFF',
                     background: '#4F46E5',
                     foreground: '#fff',
